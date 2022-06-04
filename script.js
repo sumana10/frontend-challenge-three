@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 
-const email = document.getElementById('email')
+// const email = document.getElementById('email')
 
 const validateEmail = (email) => {
   return String(email)
@@ -13,9 +13,15 @@ const validateEmail = (email) => {
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
 
-  const emailVal = email.value;
+  const email = form['email'].value;
 
- if(!validateEmail(emailVal))
+
+
+  // alert(email)
+
+//   const emailVal = email.value;
+
+ if(!validateEmail(email))
  form.classList.add('error');
  else
  form.classList.remove('error')
