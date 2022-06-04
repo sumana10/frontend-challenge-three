@@ -9,8 +9,9 @@ body {
   margin: 0;
 }
 .container{
-  display: flex;
+  display: grid;
   min-height: 100vh;
+  grid-template-columns: 1.5fr 1fr;
 }
 .inner-container{
   max-width: 450px;
@@ -19,12 +20,14 @@ body {
 .left{
   background-image: url('images/bg-pattern-desktop.svg');
   background-size: cover;
-  width: 60%;
+  /* width: 60%; */
+ 
   padding: 0 40px 40px;
 }
-.right{
-  width: 40%;
-}
+/* .right{
+  /* width: 40%; */
+  /* grid-template-columns: 1fr; 
+} */
 .bg-image{
   background-image: url('images/hero-desktop.jpg');
   background-size: cover;
@@ -155,9 +158,13 @@ form.error small{
     margin-right: -40px;
     width: calc(100% + 80px);
   }
-  .left{
-    width: 100%
+  .container{
+
+    grid-template-columns: 1fr;
   }
+  /* .left{
+    width: 100%
+  } */
   .right{
     display: none;
   }
